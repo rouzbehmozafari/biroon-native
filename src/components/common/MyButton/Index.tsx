@@ -1,11 +1,10 @@
 import React from 'react';
-import {View, Text, TextInput, ActivityIndicator} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {View, Text, TextInput, ActivityIndicator, TouchableOpacity} from 'react-native';
+
 import { useSelector } from 'react-redux';
-import { LightTheme } from '../../../styles/Theme';
+import { LightTheme as theme } from '../../../styles/Theme';
 import Styles from './Styles';
 // const {theme} = useSelector(state => state)
-const theme = LightTheme
 
 interface props {
     title: string,
@@ -17,7 +16,7 @@ interface props {
     onPress?: any,
     style?: any,
 }
-const CustomButton: React.FC<props> = ({
+const MyButton: React.FC<props> = ({
   title,
   secondary,
   primary,
@@ -32,7 +31,7 @@ const CustomButton: React.FC<props> = ({
       return theme.colors.grey;
     }
     if (primary) {
-      return theme.colors.primary;
+      return theme.colors.blue;
     }
     if (danger) {
       return theme.colors.red;
@@ -55,10 +54,10 @@ const CustomButton: React.FC<props> = ({
         )}
         {title && (
           <Text
-            style={{
-              color: disabled ? 'black' : theme.colors.white,
+            style={[{
+              color: disabled ? 'black' : theme.colors.primary,
               paddingLeft: loading ? 5 : 0,
-            }}>
+            },Styles.title]}>
             {loading ? 'Please wait...' : title}
           </Text>
         )}
@@ -67,4 +66,4 @@ const CustomButton: React.FC<props> = ({
   );
 };
 
-export default CustomButton;
+export default MyButton;

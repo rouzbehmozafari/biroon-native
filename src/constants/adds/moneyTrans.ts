@@ -1,0 +1,65 @@
+interface ImoneyTrans {
+    _id : string,
+    userId: string,
+    title: string,
+    imageUrl : string,
+    dateAdded:string,
+    timeAdded:string,
+    body: string,
+    price: number | 'negotiable' ,
+    country: string,
+    city: string,
+    phoneNum: string,
+    category: string,
+    bidOrAskOr: "bid" | "ask" | "lookingFor"
+    promotion: "free" | "type_1.1" | "type_2.1"
+}
+export const AllMoneyTrans :ImoneyTrans[] =   
+[
+    {"_id": "624addc07ffc03b1dc0986fb" ,
+    "userId": "624addf6a756b95643300084" ,
+    "title" : "We transfer your money!",
+    "imageUrl" : "https://lh3.googleusercontent.com/pw/AM-JKLWFxYHCh_aA_wIij7y6wldSeOzgge3yQhchDZcoOKy7vtygNr2YOuIflVXZszJdrIbmC6-3XQArIGx-sFml18htuUL9TxseAwRFGOFHkOGj9HLhlBiGZn0qAtD7KGNqWewJ429jzuRkdpSLJ2e8dDif=w275-h183-no?authuser=0",
+    "dateAdded" : "04.04.2022",
+    "timeAdded" : "02:03 PM",
+    "body" : "this is my body",
+    "price" : "negotiable",
+    "country": "Germany",
+    "city" : "cologne",
+    "phoneNum": "057684592784",
+    "category": "sendMoney",
+    "bidOrAskOr" : "bid",
+    "promotion" : "free"
+    }
+    ,
+    {"_id": "624addc07ffc03b1dc0986fb" ,
+    "userId": "624addf6a756b95643300084" ,
+    "title" : "We transfer your money!",
+    "imageUrl" : "https://lh3.googleusercontent.com/pw/AM-JKLWFxYHCh_aA_wIij7y6wldSeOzgge3yQhchDZcoOKy7vtygNr2YOuIflVXZszJdrIbmC6-3XQArIGx-sFml18htuUL9TxseAwRFGOFHkOGj9HLhlBiGZn0qAtD7KGNqWewJ429jzuRkdpSLJ2e8dDif=w275-h183-no?authuser=0",
+    "dateAdded" : "04.04.2022",
+    "timeAdded" : "02:03 PM",
+    "body" : "this is my body",
+    "price" : "negotiable",
+    "country": "Germany",
+    "city" : "cologne",
+    "phoneNum": "057684592784",
+    "category": "sendMoney",
+    "bidOrAskOr" : "bid",
+    "promotion" : "free"
+    },
+    {"_id": "624addc07ffc03b1dc0986fb" ,
+    "userId": "624addf6a756b95643300084" ,
+    "title" : "We transfer your money!",
+    "imageUrl" : "https://lh3.googleusercontent.com/pw/AM-JKLWFxYHCh_aA_wIij7y6wldSeOzgge3yQhchDZcoOKy7vtygNr2YOuIflVXZszJdrIbmC6-3XQArIGx-sFml18htuUL9TxseAwRFGOFHkOGj9HLhlBiGZn0qAtD7KGNqWewJ429jzuRkdpSLJ2e8dDif=w275-h183-no?authuser=0",
+    "dateAdded" : "04.04.2022",
+    "timeAdded" : "02:03 PM",
+    "body" : "this is my body",
+    "price" : "negotiable",
+    "country": "Germany",
+    "city" : "cologne",
+    "phoneNum": "057684592784",
+    "category": "sendMoney",
+    "bidOrAskOr" : "bid",
+    "promotion" : "free"
+    }
+    ]

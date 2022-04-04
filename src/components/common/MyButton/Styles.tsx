@@ -8,7 +8,6 @@ const theme = LightTheme
 export default StyleSheet.create({
     wrapper: {
       height: 42,
-  
       paddingHorizontal: 5,
   
       marginVertical: 5,
@@ -25,7 +24,10 @@ export default StyleSheet.create({
       flex: 1,
       width: '100%',
     },
-  
+    title : {
+      color: theme.colors.primary,
+      fontWeight: "bold",
+    },
     error: {
       color: theme.colors.red,
       paddingTop: 4,

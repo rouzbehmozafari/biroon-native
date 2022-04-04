@@ -46,16 +46,35 @@ import {StyleSheet, Dimensions} from 'react-native'
       l: 24,
       xl: 40,
     },
-    textVariants: {
-      header: {
+    fontVariants: {
+        fontFamily: 'Ubuntu-Medium',
+        fontSizeBody: 16,
+        fontSizeSmall: 10,
+        fontSizeH3: 20,
+        fontSizeH2: 25,
+        fontSizeH1: 30,
+    }, 
+    textVariants : {
+      h1: {
         fontFamily: 'Ubuntu-Medium',
         fontSize: 36,
-        fontWeight: 'bold',
+        fontWeight: '900',
+      },
+      h2: {
+        fontFamily: 'Ubuntu-Medium',
+        fontSize: 30,
+        fontWeight: '500',
+      },
+      h3: {
+        fontFamily: 'Ubuntu-Medium',
+        fontSize: 25,
+        fontWeight: '400',
       },
       body: {
         fontFamily: 'Ubuntu-Regular',
         fontSize: 16,
-      },
+        fontWeight: 'normal'
+      }
     }
   };
   
@@ -63,6 +82,7 @@ import {StyleSheet, Dimensions} from 'react-native'
     ...LightTheme,
     colors: {
       ...LightTheme.colors,
+      primary : palette.blue,
       background: palette.black,
       foreground: palette.white,
     },

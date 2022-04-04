@@ -4,11 +4,11 @@ import LoginRegister from '../components/templates/LoginRegister.tsx/LoginRegist
 import React from "react"
 
 
-const ProfilePage = ()=>{
+const ProfileScreen = ()=>{
     return (
         <BasicContainer>
             <LoginRegister/>
         </BasicContainer>
     )
 }
-export default ProfilePage
+export default ProfileScreen
