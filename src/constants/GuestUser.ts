@@ -11,12 +11,13 @@ interface Iuser {
     posts : object[],
     address : object,
     phone: string,
-    website: string
+    website: string,
+    gotReported : number
 }
 export default <Iuser>   {
     "_id" : "6249b4a105f3b6633fac446c",
     "email" : "rouzbeh.mozafari.ai@gmail.com",
-    "firstName": "Rouz",
+    "firstName": "Guest",
     "lastName" : "mo",
     "password": "123456789",
     "isAuth" : true,
@@ -24,6 +25,7 @@ export default <Iuser>   {
     "signUpDate": "01.03.2022",
     "favorites" : [],
     "posts": [],
+    "gotReported" : 0,
     "address": {
         "street": "EckeHolterstr",
         "HauseNumber": "0",

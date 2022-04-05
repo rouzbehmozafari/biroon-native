@@ -4,8 +4,9 @@ import { componentStyles } from "../../../styles/Theme"
 
 export default StyleSheet.create({
     container : {
-        flex:1,
-        alignItems:"center",
+        // flex:1,
+        // alignItems:"center",
+        flexDirection: 'row',
         width: componentStyles.sizes.widthSwitchWithText,
         margin: 20,
     }

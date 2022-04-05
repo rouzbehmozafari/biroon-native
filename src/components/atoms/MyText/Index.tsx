@@ -3,21 +3,21 @@ import { StyleSheet, Text, TextStyle } from 'react-native'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../../redux/store'
 
-type IfSize = 'body' | 'small' | 'h3' | 'h2' | 'h1' | undefined
+type tFontSize = 'body' | 'h4' | 'h3' | 'h2' | 'h1' | undefined
 
 interface Iprops {
-    textVal: string
-    type? : IfSize,
-    styleProp? : TextStyle
+    type? : tFontSize,
+    style? : TextStyle,
+    children : any
 }   
 
-export const MyText : React.FC<Iprops> = ({textVal,type,styleProp})=> {
+export const MyText : React.FC<Iprops> = ({type,style,children})=> {
     const {theme} = useSelector((state: RootState) => state)
 
-    const fontSizer = (parameter: IfSize) => {
+    const fontSizer = (parameter: tFontSize) => {
         switch (parameter) {
-            case 'small':
-                return theme.fontVariants.fontSizeSmall
+            case 'h4':
+                return theme.fontVariants.fontSizeH4
                 break;
             case 'h3':
                 return theme.fontVariants.fontSizeH3
@@ -34,16 +34,18 @@ export const MyText : React.FC<Iprops> = ({textVal,type,styleProp})=> {
         }
     }
 
-    const style = StyleSheet.create({
+    const Style = StyleSheet.create({
         wrapper :{
             fontSize : fontSizer(type),
-            margin : theme.spacing.s,
-            color: theme.colors.primary
+            // margin : theme.spacing.sss,
+            color: theme.colors.text.body,
+            // padding: theme.spacing.sss,
+            
         }
     }) 
     return (
-        <Text style={[style.wrapper,styleProp]}>
-            {textVal}
+        <Text style={[Style.wrapper,style]}>
+            {children}
         </Text>
     )
 }

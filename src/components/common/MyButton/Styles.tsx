@@ -25,11 +25,11 @@ export default StyleSheet.create({
       width: '100%',
     },
     title : {
-      color: theme.colors.primary,
+      color: theme.colors.text.title,
       fontWeight: "bold",
     },
     error: {
-      color: theme.colors.red,
+      color: theme.pallete.danger,
       paddingTop: 4,
       fontSize: 12,
     },

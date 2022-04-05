@@ -28,17 +28,17 @@ const MyButton: React.FC<props> = ({
 }) => {
   const getBgColor = () => {
     if (disabled) {
-      return theme.colors.grey;
+      return theme.pallete.c2;
     }
     if (primary) {
-      return theme.colors.blue;
+      return theme.pallete.primary;
     }
     if (danger) {
-      return theme.colors.red;
+      return theme.pallete.danger;
     }
 
     if (secondary) {
-      return theme.colors.blue;
+      return theme.pallete.secondary;
     }
   };
   return (
@@ -49,13 +49,13 @@ const MyButton: React.FC<props> = ({
       <View style={[Styles.loaderSection]}>
         {loading && (
           <ActivityIndicator
-            color={primary ? theme.colors.blue : theme.colors.primary}
+            color={primary ? theme.pallete.c7: theme.pallete.c9}
           />
         )}
         {title && (
           <Text
             style={[{
-              color: disabled ? 'black' : theme.colors.primary,
+              color: disabled ? theme.pallete.c2 : theme.colors.input.general,
               paddingLeft: loading ? 5 : 0,
             },Styles.title]}>
             {loading ? 'Please wait...' : title}

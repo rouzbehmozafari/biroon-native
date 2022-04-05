@@ -6,7 +6,7 @@ export const ViewAll:React.FC = ()=>{
 
     return (
             <View style={Styles.wrapper}>
-                <MyText type="h3" textVal="View all" />
+                <MyText type="h3" >View all</MyText>
             </View>
     )
 }

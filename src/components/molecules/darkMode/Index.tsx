@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Switch, Text, View } from 'react-native'
 import { useDispatch} from 'react-redux'
 import { setDark, setLight } from '../../../redux/slices/themeSlice'
+import { MyText } from '../../atoms/MyText/Index'
 import styles from './styles'
 const DarkMode = ()=>{
     const [value,setValue] = useState<boolean>(false)
@@ -14,7 +15,7 @@ const DarkMode = ()=>{
     
     return (
         <View style={styles.container} >
-            <Text>Sun or Moon?</Text>
+            <MyText type='body'>Sun or Moon</MyText>
             <Switch value={value} onValueChange={toggleSwitch} />
         </View>
     )
