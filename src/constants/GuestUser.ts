@@ -12,7 +12,8 @@ interface Iuser {
     address : object,
     phone: string,
     website: string,
-    gotReported : number
+    gotReported : number,
+    profImgUrl : string
 }
 export default <Iuser>   {
     "_id" : "6249b4a105f3b6633fac446c",
@@ -22,6 +23,7 @@ export default <Iuser>   {
     "password": "123456789",
     "isAuth" : true,
     "authCode" : "1234",
+    "profImgUrl" : "",
     "signUpDate": "01.03.2022",
     "favorites" : [],
     "posts": [],

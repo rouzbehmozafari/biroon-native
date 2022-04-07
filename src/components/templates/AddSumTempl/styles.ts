@@ -14,7 +14,7 @@ export default StyleSheet.create({
         padding: theme.spacing.s,
         margin: theme.spacing.s,
         marginBottom : 0,
-        backgroundColor: theme.pallete.c2,
+        backgroundColor: theme.colors.containers.general,
         // borderRadius: theme.spacing.m,
         borderTopRightRadius: theme.spacing.m,
         borderTopLeftRadius: theme.spacing.m,

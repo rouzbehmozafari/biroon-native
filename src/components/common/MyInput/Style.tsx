@@ -1,5 +1,9 @@
+import { store } from "../../../redux/store"
+
+const {theme} = store.getState()
 export const Style = {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth : 1
+    height: theme.widthHight.s,
+    borderColor: theme.colors.borders.first,
+    borderWidth : 1,
+    borderRadius: theme.spacing.m
 }

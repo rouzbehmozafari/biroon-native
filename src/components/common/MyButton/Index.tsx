@@ -55,7 +55,7 @@ const MyButton: React.FC<props> = ({
         {title && (
           <Text
             style={[{
-              color: disabled ? theme.pallete.c2 : theme.colors.input.general,
+              color: disabled ? theme.pallete.c2 : theme.colors.input.text,
               paddingLeft: loading ? 5 : 0,
             },Styles.title]}>
             {loading ? 'Please wait...' : title}

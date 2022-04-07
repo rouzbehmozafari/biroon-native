@@ -1,17 +1,15 @@
 import { StyleSheet } from "react-native";
 import { useSelector } from "react-redux";
-import { LightTheme } from "../../../styles/Theme";
+import { store } from "../../../redux/store";
 
-
-// const {theme} = useSelector(state => state)
-const theme = LightTheme
+const {theme} = store.getState()
 export default StyleSheet.create({
     wrapper: {
-      height: 42,
+      height: theme.widthHight.s,
       paddingHorizontal: 5,
   
       marginVertical: 5,
-      borderRadius: 4,
+      borderRadius: theme.spacing.m,
       alignItems: 'center',
       justifyContent: 'space-evenly',
     },
@@ -25,7 +23,7 @@ export default StyleSheet.create({
       width: '100%',
     },
     title : {
-      color: theme.colors.text.title,
+      color: theme.colors.input.text,
       fontWeight: "bold",
     },
     error: {

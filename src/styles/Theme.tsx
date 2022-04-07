@@ -8,18 +8,17 @@ import {StyleSheet, Dimensions} from 'react-native'
 
 // font-family: 'Ubuntu', sans-serif;
 
-
   const palette = {
-    c1: '#d9ed92ff',
-    c2: '#b5e48cff',
-    c3: '#99d98cff',
-    c4: '#76c893ff',
-    c5: '#52b69aff',
-    c6: '#34a0a4ff',
-    c7: '#168aadff',
-    c8: '#1a759fff',
-    c9: '#1e6091ff',
-    c10: '#184e77ff',
+    c1: '#ebebebff',
+    c2: '#c5c6c6ff',
+    c3: '#b2b0b0ff',
+    c4: '#9b9c9bff',
+    c5: '#bce3faff',
+    c6: '#7ccdf4ff',
+    c7: '#00a9e2ff',
+    c8: '#007bbaff',
+    c9: '#2c4268ff',
+    c10: '#23233bff',
     disabled: 'gray',
     primary:'#184e77ff',
     danger : 'red',
@@ -27,6 +26,7 @@ import {StyleSheet, Dimensions} from 'react-native'
     bright : 'white',
     dark : 'black'
   }
+
 
   export const componentStyles = {
     sizes: {
@@ -43,43 +43,51 @@ import {StyleSheet, Dimensions} from 'react-native'
       fullWidth: Dimensions.get('window').width
     },
     colors: {
-      screenBack: palette.c1,
+      screenBack: palette.bright,
       containers : {
-        general : palette.c6,
-        bigTemplates: palette.c2
+        general : palette.c1,
+        bigTemplates: palette.bright
       },
       input : {
-        general : palette.c10
+        general : palette.c1,
+        text: palette.c1
       },
       nav :{
-        back : palette.c3
+        back : palette.c1
       },
       text : {
         body :palette.c10,
         title : palette.c1,
         titleh2 : palette.c8,
         titleh3 : palette.c9,
+      },
+      borders : {
+        first : palette.c7
       }
     },
     spacing: {
       sss: 2,
       ss: 4,
       s: 8,
+      sm : 12,
       m: 16,
       ml: 20,
       l: 24,
       ll : 30,
       xl: 40,
+      xxl: 55,
     },
     widthHight :{
       sss: 10,
-      ss: 30,
+      ss: 40,
       s: 50,
+      sm: 65,
       m: 80,
       ml: 130,
-      l: 180,
+      l: 150,
       ll : 220,
       xl: 270,
+      xxl: 320
     },
     thickness : {
       sss: .3,
@@ -121,7 +129,8 @@ import {StyleSheet, Dimensions} from 'react-native'
         fontSize: 16,
         fontWeight: 'normal'
       }
-    }
+    },
+
   };
   
   export const DarkTheme = {

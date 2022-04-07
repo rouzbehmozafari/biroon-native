@@ -1,13 +1,17 @@
 import React from 'react'
 import AddScreen from '../screens/AddScreen';
 import HomeScreen from '../screens/HomeScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import ProfileStack from '../screens/ProfileStack';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { StyleSheet } from 'react-native';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import HomeSvg from '../assets/images/svg/HomeSvg';
+import AddSvg from '../assets/images/svg/AddSvg';
+import ProfileSvg from '../assets/images/svg/ProfileSvg';
 const Tab = createMaterialBottomTabNavigator();
 const TabNavigator = () =>{
     const {theme} = useSelector((state: RootState) => state) 
@@ -21,7 +25,8 @@ const TabNavigator = () =>{
                     options={{
                         tabBarLabel: 'Add',
                         tabBarIcon: ({ color }) => (
-                          <Icon name="house" color={'white'} size={26} />
+                        //   <Icon name="window-maximize" color={'white'} size={26} />
+                            <AddSvg/>
                         ),
                       }}
                 name='Add' component={AddScreen}  />
@@ -29,7 +34,9 @@ const TabNavigator = () =>{
                     options={{
                         tabBarLabel: 'Home',
                         tabBarIcon: ({ color }) => (
-                            <Icon name="mdiHome " color={'white'} size={26} />
+                            // <FontAwesomeIcon icon={faCoffee} />
+                            <HomeSvg/>
+
                         ),
                         }}
                  name='Home' component={HomeScreen} />
@@ -37,10 +44,10 @@ const TabNavigator = () =>{
                     options={{
                         tabBarLabel: 'Profile',
                         tabBarIcon: ({ color }) => (
-                            <Icon name="account" color={'white'} size={26} />
+                            <ProfileSvg/>
                         ),
                         }}
-                name='Profile' component={ProfileScreen} />
+                name='profilestack' component={ProfileStack} />
             </Tab.Navigator>
     )
 }

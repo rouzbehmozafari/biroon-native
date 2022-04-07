@@ -11,11 +11,11 @@ const HomeScreen = ()=>{
     return (
         <BasicContainer style={{backgroundColor: theme.colors.screenBack}}>
             <AddSumTempl dataArray={AllMoneyTrans}
-             header="MONEY TRANSACTIONS" subCategory='transactions' / >
+             header="Money Transactions" subCategory='transactions' / >
             <AddSumTempl dataArray={AllMoneyTrans}
-             header="TRASPORTATIONS" subCategory='transactions' / >
+             header="Transportations" subCategory='transactions' / >
             <AddSumTempl dataArray={AllMoneyTrans}
-             header="OTHER" subCategory='transactions' / >
+             header="Other (Jobs, Houses, Adds, ...)" subCategory='transactions' / >
         </BasicContainer>
     )
 }
