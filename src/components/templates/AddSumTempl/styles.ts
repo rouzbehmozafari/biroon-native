@@ -12,18 +12,13 @@ export default StyleSheet.create({
         alignItems: "stretch",
         justifyContent : 'space-between',
         padding: theme.spacing.s,
-        margin: theme.spacing.s,
-        marginBottom : 0,
+        margin : 0,
         backgroundColor: theme.colors.containers.general,
-        // borderRadius: theme.spacing.m,
-        borderTopRightRadius: theme.spacing.m,
-        borderTopLeftRadius: theme.spacing.m,
-
     },
     wrapper : {
-        marginVertical: theme.spacing.m,
+        // marginVertical: theme.spacing.ss,
     },
     viewAll : {
-        // paddingLeft: theme.spacing.xl
+        paddingRight: theme.spacing.s
     }
 })

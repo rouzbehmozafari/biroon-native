@@ -57,7 +57,7 @@ import {StyleSheet, Dimensions} from 'react-native'
       },
       text : {
         body :palette.c10,
-        title : palette.c1,
+        title : palette.c8,
         titleh2 : palette.c8,
         titleh3 : palette.c9,
       },

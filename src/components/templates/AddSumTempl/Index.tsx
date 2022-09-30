@@ -9,7 +9,7 @@ import styles from "./styles"
 
 interface Iprops {
     header : string,
-    subCategory : 'transactions'|'transportations' | 'other',
+    subCategory : number,
     dataArray : any[],
     Styles? : ViewStyle
 }
@@ -24,7 +24,7 @@ export const AddSumTempl:React.FC<Iprops> = ({header,subCategory,dataArray,Style
             <ScrollView style={styles.list} horizontal>
                 {dataArray.map(i => 
                     <AddOverView
-                    subCategory='transaction'
+                    subCategory= {i.categoryId}
                     title={i.title} imageUrl={i.imageUrl}
                     price={i.price} />
                 )}

@@ -12,7 +12,7 @@ interface Iprops {
     styleProp? : ViewStyle,
     imageUrl :  string,
     price : number | 'Negotiable',
-    subCategory : 'transaction' | 'transport' | 'other'
+    subCategory : number
 }   
 
 export const AddOverView : React.FC<Iprops> = ({subCategory,title,styleProp,imageUrl,price})=> {
